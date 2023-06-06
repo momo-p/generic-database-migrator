@@ -1,27 +1,10 @@
-# ts-library-template
-A simple template for creating typescript library.
+# generic-database-migrator
+A low level database migrator, it's only assume that database schema change grouped by `feauture` and `time`.
 
 ## Features
-- [x] basic need to create a library
-- [x] testing support with [mocha](https://mochajs.org)
-- [ ] github action that automatically run on every PR to master
-- [ ] github action to publish package to `npm`
+- [ ] sql command batcher for simple synchronizer
+- [ ] custom synchronizer with the input is the migrator context
+- [ ] mixed synchronizer which grouped and run synchronizer sequentially
 
-## How to use
-1. Clone this repository
-```
-git clone git@github.com:momo-p/ts-library-template.git
-```
-
-2 . Change the current `origin` to your repository url
-```
-git remote set-url origin <your repo url>
-```
-
-3. Update `package.json`
-
-4. Update the current license to your needs.
-
-5. Update the `README.md`
-
-6. Commit, push and do whatever you want
+## Usage
+<todo>

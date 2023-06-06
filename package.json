@@ -1,10 +1,10 @@
 {
-  "name": "ts-library-template",
+  "name": "generic-database-migrator",
   "version": "0.0.1",
-  "description": "A simple template for creating typescript library.",
+  "description": "Low level framework for database migration.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/momo-p/ts-library-template.git"
+    "url": "git://github.com/momo-p/generic-database-migrator.git"
   },
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.js",
@@ -20,11 +20,14 @@
     "prepare": "husky install"
   },
   "keywords": [
-    "typescript",
-    "template"
+    "database",
+    "migration",
+    "migrator",
+    "synchronizer",
+    "sql"
   ],
   "author": "momo-p <contact@relay.akimitsu.dev> (https://github.com/momo-p)",
-  "license": "Unlicense",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
