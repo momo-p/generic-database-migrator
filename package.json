@@ -54,5 +54,8 @@
       "pnpm lint",
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "@supercharge/promise-pool": "^2.4.0"
   }
 }

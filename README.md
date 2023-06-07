@@ -5,7 +5,8 @@ A low level database migrator, it's only assume that database schema change grou
 - [x] sql command batcher for simple synchronizer
 - [x] custom synchronizer with the input is the migrator context
 - [x] mixed synchronizer which grouped and run synchronizer sequentially
-- [ ] easy to use migrator
+- [x] easy to use migrator
+- [ ] logger integration for debug purpose
 
 ## Usage
 <todo>
