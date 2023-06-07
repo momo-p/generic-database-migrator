@@ -1,4 +1,5 @@
 export type ExecutorFn = (command: string) => Promise<void>;
+export type SynchronizerFn<Context> = (context: Context) => Promise<void>;
 
 export class SimpleSynchronizer {
   readonly commands: string[];
@@ -25,5 +26,17 @@ export class SimpleSynchronizer {
   private async executeBatch(executor: ExecutorFn, commands: string[]) {
     const jobs = commands.map((command) => executor(command));
     await Promise.allSettled(jobs);
+  }
+}
+
+export class CustomSynchronizer<Context> {
+  private readonly synchronizer: SynchronizerFn<Context>;
+
+  constructor({ synchronizer }: { synchronizer: SynchronizerFn<Context> }) {
+    this.synchronizer = synchronizer;
+  }
+
+  async execute({ context }: { context: Context }) {
+    await this.synchronizer(context);
   }
 }

@@ -1,1 +1,6 @@
-export { ExecutorFn, SimpleSynchronizer } from "./synchronizer";
+export {
+  ExecutorFn,
+  SynchronizerFn,
+  SimpleSynchronizer,
+  CustomSynchronizer,
+} from "./synchronizer";
