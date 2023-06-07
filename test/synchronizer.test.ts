@@ -3,7 +3,7 @@ import AsyncLock = require("async-lock");
 import { waitUntil } from "./utils";
 import { SimpleSynchronizer, CustomSynchronizer } from "../src";
 
-describe("simple synchronizer test", () => {
+describe("simple synchronizer test.", () => {
   it("single command executed.", async () => {
     const commands = ["1.1"];
     const executedCommands = [];
