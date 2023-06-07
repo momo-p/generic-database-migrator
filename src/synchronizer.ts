@@ -1,5 +1,9 @@
 export type ExecutorFn = (command: string) => Promise<void>;
 export type SynchronizerFn<Context> = (context: Context) => Promise<void>;
+export type Synchronizer<Context> =
+  | SimpleSynchronizer
+  | CustomSynchronizer<Context>
+  | MixedSynchronizer<Context>;
 
 export class SimpleSynchronizer {
   readonly commands: string[];
@@ -38,5 +42,40 @@ export class CustomSynchronizer<Context> {
 
   async execute({ context }: { context: Context }) {
     await this.synchronizer(context);
+  }
+}
+
+export class MixedSynchronizer<Context> {
+  private readonly synchronizers: Array<Synchronizer<Context>>;
+
+  constructor({
+    synchronizers,
+  }: {
+    synchronizers: Array<Synchronizer<Context>>;
+  }) {
+    this.synchronizers = synchronizers.map((synchronizer) => synchronizer);
+  }
+
+  async execute({
+    executor,
+    context,
+  }: {
+    executor: ExecutorFn;
+    context: Context;
+  }) {
+    for (const synchronizer of this.synchronizers) {
+      if (synchronizer instanceof SimpleSynchronizer) {
+        await (synchronizer as SimpleSynchronizer).execute({ executor });
+      } else if (synchronizer instanceof CustomSynchronizer) {
+        await (synchronizer as CustomSynchronizer<Context>).execute({
+          context,
+        });
+      } else {
+        await (synchronizer as MixedSynchronizer<Context>).execute({
+          executor,
+          context,
+        });
+      }
+    }
   }
 }
