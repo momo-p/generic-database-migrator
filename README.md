@@ -2,9 +2,10 @@
 A low level database migrator, it's only assume that database schema change grouped by `feature` and `time`.
 
 ## Features
-- [ ] sql command batcher for simple synchronizer
-- [ ] custom synchronizer with the input is the migrator context
-- [ ] mixed synchronizer which grouped and run synchronizer sequentially
+- [x] sql command batcher for simple synchronizer
+- [x] custom synchronizer with the input is the migrator context
+- [x] mixed synchronizer which grouped and run synchronizer sequentially
+- [ ] easy to use migrator
 
 ## Usage
 <todo>
