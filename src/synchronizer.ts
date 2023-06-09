@@ -29,7 +29,7 @@ export class SimpleSynchronizer {
 
   private async executeBatch(executor: ExecutorFn, commands: string[]) {
     const jobs = commands.map((command) => executor(command));
-    await Promise.allSettled(jobs);
+    await Promise.all(jobs);
   }
 }
 
