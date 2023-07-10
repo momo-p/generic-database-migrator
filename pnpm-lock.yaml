@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@supercharge/promise-pool':
-    specifier: ^2.4.0
-    version: 2.4.0
+    specifier: ^3.0.0
+    version: 3.0.0
 
 devDependencies:
   '@commitlint/cli':
@@ -348,8 +348,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@supercharge/promise-pool@2.4.0:
-    resolution: {integrity: sha512-O9CMipBlq5OObdt1uKJGIzm9cdjpPWfj+a+Zw9EgWKxaMNHKC7EU7X9taj3H0EGQNLOSq2jAcOa3EzxlfHsD6w==}
+  /@supercharge/promise-pool@3.0.0:
+    resolution: {integrity: sha512-AV9k1G1r73ppq5z08zXvbFF0skvqzgR5ZAVYQy+wDqQgehe7zDLXgeEo4EisKSKS2aK+aoFi27gzYw2Eny+g7g==}
     engines: {node: '>=8'}
     dev: false
 

@@ -56,6 +56,6 @@
     ]
   },
   "dependencies": {
-    "@supercharge/promise-pool": "^2.4.0"
+    "@supercharge/promise-pool": "^3.0.0"
   }
 }
